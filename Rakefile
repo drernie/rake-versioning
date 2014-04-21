@@ -9,7 +9,7 @@ require 'spec/rake/spectask'
 
 spec = Gem::Specification.new do |s|
   s.name    = 'rake-versioning'
-  s.version = RakeVersioning::Version.current or '0.0.0'
+  s.version = RakeVersioning::Version.current || '0.0.0'
   s.summary = 'simple version-number encapsulation'
 
   s.author  = 'Stephen Touset'
