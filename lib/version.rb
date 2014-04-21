@@ -8,7 +8,7 @@ require 'pathname'
 #
 # Encodes version-numbering logic into a convenient class.
 #
-class Version
+class VersionTask::Version
   include Comparable
 
   autoload :Component, 'version/component'
@@ -79,8 +79,8 @@ class Version
     return self[self.length + index] = value if index < 0
 
     length = self.length - index
-    zeroes = Array.new length.abs, Version::Component.new('0')
-    value  = Version::Component.new(value.to_s)
+    zeroes = Array.new length.abs, VersionTask::Version::Component.new('0')
+    value  = VersionTask::Version::Component.new(value.to_s)
 
     if length >= 0
       self.components[index, length] = zeroes
@@ -224,6 +224,6 @@ class Version
   end
 end
 
-class Version
+class VersionTask::Version
   is_versioned
 end
