@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.date = "2014-04-21"
   s.email = "stephen@touset.org"
   s.extra_rdoc_files = ["History.rdoc", "README.rdoc", "TODO.rdoc"]
-  s.files = ["Gemfile", "Gemfile.lock", "History.rdoc", "License.txt", "README.rdoc", "Rakefile", "TODO.rdoc", "VERSION", "lib/rake-versioning.rb", "lib/rake-versioning/component.rb", "lib/rake-versioning/ext/array.rb", "lib/rake-versioning/ext/hash.rb", "lib/rake-versioning/ext/module.rb", "lib/rake-versioning/ext/string.rb", "lib/rake/rake-versioning.rb", "spec/spec.opts", "spec/spec_helper.rb", "spec/version_spec.rb"]
+  s.files = ["Gemfile", "History.rdoc", "License.txt", "README.rdoc", "Rakefile", "TODO.rdoc", "VERSION", "lib/rake-versioning.rb", "lib/rake-versioning/component.rb", "lib/rake-versioning/ext/array.rb", "lib/rake-versioning/ext/hash.rb", "lib/rake-versioning/ext/module.rb", "lib/rake-versioning/ext/string.rb", "lib/rake/rake-versioning.rb", "spec/spec.opts", "spec/spec_helper.rb", "spec/version_spec.rb"]
   s.rdoc_options = ["--main", "README.rdoc"]
   s.rubygems_version = "2.2.0"
   s.summary = "simple version-number encapsulation"
