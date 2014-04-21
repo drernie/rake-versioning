@@ -1,4 +1,4 @@
-require 'version'
+require 'version_task'
 
 require 'rake/tasklib'
 require 'pathname'

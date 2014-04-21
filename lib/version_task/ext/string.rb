@@ -1,4 +1,4 @@
-require 'version'
+require 'version_task'
 
 class String
   #

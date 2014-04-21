@@ -1,4 +1,4 @@
-require 'version'
+require 'version_task'
 
 class VersionTask::Version::Component
   attr_accessor :digits

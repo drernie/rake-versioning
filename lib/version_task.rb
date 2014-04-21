@@ -1,7 +1,7 @@
-require 'version/ext/array'
-require 'version/ext/module'
-require 'version/ext/hash'
-require 'version/ext/string'
+require 'version_task/ext/array'
+require 'version_task/ext/module'
+require 'version_task/ext/hash'
+require 'version_task/ext/string'
 
 require 'pathname'
 
@@ -11,7 +11,7 @@ require 'pathname'
 class VersionTask::Version
   include Comparable
 
-  autoload :Component, 'version/component'
+  autoload :Component, 'version_task/component'
 
   #
   # Searches through the parent directories of the calling method and looks
