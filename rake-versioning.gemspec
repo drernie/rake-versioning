@@ -1,19 +1,19 @@
 # -*- encoding: utf-8 -*-
-# stub: version 2.0.0a ruby lib
+# stub: rake-versioning 0.1.0 ruby lib
 
 Gem::Specification.new do |s|
-  s.name = "version"
-  s.version = "2.0.0a"
+  s.name = "rake-versioning"
+  s.version = "0.1.0"
 
-  s.required_rubygems_version = Gem::Requirement.new("> 1.3.1") if s.respond_to? :required_rubygems_version=
+  s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
   s.authors = ["Stephen Touset"]
   s.date = "2014-04-21"
   s.email = "stephen@touset.org"
   s.extra_rdoc_files = ["History.rdoc", "README.rdoc", "TODO.rdoc"]
-  s.files = ["Gemfile", "Gemfile.lock", "History.rdoc", "License.txt", "README.rdoc", "Rakefile", "TODO.rdoc", "VERSION", "lib/rake/rake_versioning.rb", "lib/rake_versioning.rb", "lib/rake_versioning/component.rb", "lib/rake_versioning/ext/array.rb", "lib/rake_versioning/ext/hash.rb", "lib/rake_versioning/ext/module.rb", "lib/rake_versioning/ext/string.rb", "spec/spec.opts", "spec/spec_helper.rb", "spec/version_spec.rb"]
+  s.files = ["Gemfile", "Gemfile.lock", "History.rdoc", "License.txt", "README.rdoc", "Rakefile", "TODO.rdoc", "lib/rake-versioning.rb", "lib/rake-versioning/component.rb", "lib/rake-versioning/ext/array.rb", "lib/rake-versioning/ext/hash.rb", "lib/rake-versioning/ext/module.rb", "lib/rake-versioning/ext/string.rb", "lib/rake/rake-versioning.rb", "spec/spec.opts", "spec/spec_helper.rb", "spec/version_spec.rb"]
   s.rdoc_options = ["--main", "README.rdoc"]
-  s.rubygems_version = "2.2.2"
+  s.rubygems_version = "2.2.0"
   s.summary = "simple version-number encapsulation"
 
   if s.respond_to? :specification_version then
