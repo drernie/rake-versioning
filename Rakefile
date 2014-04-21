@@ -9,17 +9,17 @@ require 'spec/rake/spectask'
 
 spec = Gem::Specification.new do |s|
   s.name    = 'version'
-  s.version = Version.current or '0.0.0'
+  s.version = VersionTask::Version.current or '0.0.0'
   s.summary = 'simple version-number encapsulation'
-  
+
   s.author  = 'Stephen Touset'
   s.email   = 'stephen@touset.org'
-  
+
   s.files   = Dir['[A-Z]*', 'lib/**/*.rb', 'spec/**/*']
-  
+
   s.extra_rdoc_files = Dir['*.rdoc']
   s.rdoc_options = %w{ --main README.rdoc }
-  
+
   s.add_development_dependency 'rake'
   s.add_development_dependency 'rspec', '~> 1'
 end
@@ -29,7 +29,7 @@ Gem::PackageTask.new(spec) do |gem|
 end
 
 Rake::RDocTask.new do |doc|
-  doc.title    = "version #{Version.current}"
+  doc.title    = "version #{VersionTask::Version.current}"
   doc.rdoc_dir = 'doc'
   doc.main     = 'README.rdoc'
   doc.rdoc_files.include('*.rdoc')
