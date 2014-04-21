@@ -21,12 +21,12 @@ Rake Versioning is a simple wrapper around the concept of version-numbering sche
 
 For a quick introduction to the original gem, watch the
 screencast[http://blip.tv/file/get/Tkadom-ATLRUGSteveTousetPresentingRake Versioning277.mov]
-of my presentation[http://atlruby.org/stouset/posts/138-version-task] at the
+of a presentation[http://atlruby.org/stouset/posts/138-version-task] at the
 {Atlanta Ruby Users' Group}[http://atlruby.org/].
 
 === Rake Tasks
 
-Rake Versioning comes with a RakeVersioning task that lets you manage version numbering
+Rake Versioning comes with a task that lets you manage version numbering
 automatically. Place the following in a Rakefile:
 
   require 'rake/rake-versioning'
@@ -104,7 +104,7 @@ Version.current rdoc for details.
 === Manipulation in Code
 
 All the above functionality is performed behind-the-scenes by the Rake Versioning
-library. It's simple to use, but I'll be surprised if there's much point
+library. It's simple to use, but there's not much point
 beyond doing the legwork for the Rake task and class versioning.
 
   v = "1.2.0".to_version
@@ -117,7 +117,7 @@ beyond doing the legwork for the Rake task and class versioning.
 
 == Install
 
-In your Gemfile, add:
+In your Gemfile add:
 
   group :development do
     gem 'rake-versioning', github: 'drernie/rake-versioning'
