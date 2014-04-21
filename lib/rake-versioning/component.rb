@@ -1,4 +1,4 @@
-require 'rake_versioning'
+require 'rake-versioning'
 
 class RakeVersioning::Version::Component
   attr_accessor :digits

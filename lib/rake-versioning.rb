@@ -1,7 +1,7 @@
-require 'rake_versioning/ext/array'
-require 'rake_versioning/ext/module'
-require 'rake_versioning/ext/hash'
-require 'rake_versioning/ext/string'
+require 'rake-versioning/ext/array'
+require 'rake-versioning/ext/module'
+require 'rake-versioning/ext/hash'
+require 'rake-versioning/ext/string'
 
 require 'pathname'
 
@@ -12,7 +12,7 @@ module RakeVersioning
   class Version
     include Comparable
 
-    autoload :Component, 'rake_versioning/component'
+    autoload :Component, 'rake-versioning/component'
 
     #
     # Searches through the parent directories of the calling method and looks
