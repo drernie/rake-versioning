@@ -1,6 +1,6 @@
 $: << 'lib'
 
-require 'rake/rake_versioning'
+require 'rake/rake-versioning'
 
 require 'rubygems'
 require 'rubygems/package_task'
