@@ -1,7 +1,10 @@
 = Rake Versioning
 
 * https://github.com/drernie/rake-versioning
-* FROM: http://github.com/stouset/version / http://rdoc.info/gems/version/ / http://atlruby.org/stouset/posts/138-version-task
+* FROM:
+** http://github.com/stouset/version
+** http://rdoc.info/gems/version/
+** http://atlruby.org/stouset/posts/138-version-task
 
 == Description
 
@@ -9,7 +12,7 @@ Rake Versioning is a simple wrapper around the concept of version-numbering sche
 
 == Features
 
-* Rake::VersioningTask provides tasks for simple version bumping
+* Rake::RakeVersioning provides tasks for simple version bumping
 * Rake Versioning smartly handles several versioning schemes, abstracting the details
 
 == Examples
@@ -23,11 +26,11 @@ of my presentation[http://atlruby.org/stouset/posts/138-version-task] at the
 
 === Rake Tasks
 
-Rake Versioning comes with a Rake::Rake VersioningTask that lets you manage version numbering
+Rake Versioning comes with a RakeVersioning task that lets you manage version numbering
 automatically. Place the following in a Rakefile:
 
-  require 'rake/rake_versioning'
-  Rake::Rake VersioningTask.new
+  require 'rake/rake-versioning'
+  Rake::RakeVersioning.new
 
 You're all set up.
 
@@ -57,37 +60,36 @@ Now `rake -T version` will tell you what all you can do.
   $ rake version:bump:minor           # => 1.1.0
   $ cat VERSION                       # => 1.1.0
 
-The Rake VersioningTask can automatically manage git tagging for
+The RakeVersioning task can automatically manage git tagging for
 you, too.
 
-  Rake::Rake VersioningTask.new do |task|
+  Rake::RakeVersioning.new do |task|
     task.with_git_tag = true
   end
 
-And if you want the Rake VersioningTask to automatically emit updated gemspecs on
+And if you want the RakeVersioning task to automatically emit updated gemspecs on
 version-bumps, use the +with_gemspec+ flag.
 
   spec = Gem::Specification.new do |s|
     ...
   end
 
-  Rake::Rake VersioningTask.new do |task|
+  Rake::RakeVersioning.new do |task|
     task.with_gemspec = spec
   end
 
-Rake Versioning also supports a .yml VERSION file. See the Rake VersioningTask rdoc for
-details.
+Rake Versioning can also be used with a .yml VERSION file. See Version.to_hash or Hash.to_version for details.
 
-=== Library Rake Versioninging
+=== Library Versioning
 
 Rake Versioning lets you automatically keep an in-class VERSION constant in sync with
-the contents of the version file on disk. Rake Versioning also provides a class-level
+the contents of the version file on disk. Version also provides a class-level
 +current+ method which lets you get the current version without setting a
 class-level constant.
 
   require 'version'
 
-  Rake Versioning.current # => 1.0.1
+  RakeVersioning::Version.current # => 1.0.1
 
   class Foo
     is_versioned
@@ -95,9 +97,9 @@ class-level constant.
 
   Foo::VERSION # => 1.0.1
 
-The Rake Versioning.current and Class::is_versioned methods both take a filename
+The Version.current and Class::is_versioned methods both take a filename
 parameter if you use a different location for the VERSION file. See the
-Rake Versioning.current rdoc for details.
+Version.current rdoc for details.
 
 === Manipulation in Code
 
@@ -115,4 +117,9 @@ beyond doing the legwork for the Rake task and class versioning.
 
 == Install
 
-  [sudo] gem install version
+In your Gemfile, add:
+
+  group :development do
+    gem 'rake-versioning', github: 'drernie/rake-versioning'
+  end
+
