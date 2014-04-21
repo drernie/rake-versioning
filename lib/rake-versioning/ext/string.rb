@@ -1,10 +1,10 @@
-require 'version_task'
+require 'rake_versioning'
 
 class String
   #
   # Converts the String into a version number.
   #
   def to_version
-    VersionTask::Version.new *self.split(%r{\.})
+    RakeVersioning::Version.new *self.split(%r{\.})
   end
 end

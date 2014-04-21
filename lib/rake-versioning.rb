@@ -1,18 +1,18 @@
-require 'version_task/ext/array'
-require 'version_task/ext/module'
-require 'version_task/ext/hash'
-require 'version_task/ext/string'
+require 'rake_versioning/ext/array'
+require 'rake_versioning/ext/module'
+require 'rake_versioning/ext/hash'
+require 'rake_versioning/ext/string'
 
 require 'pathname'
 
 #
 # Encodes version-numbering logic into a convenient class.
 #
-module VersionTask
+module RakeVersioning
   class Version
     include Comparable
 
-    autoload :Component, 'version_task/component'
+    autoload :Component, 'rake_versioning/component'
 
     #
     # Searches through the parent directories of the calling method and looks
@@ -80,8 +80,8 @@ module VersionTask
       return self[self.length + index] = value if index < 0
 
       length = self.length - index
-      zeroes = Array.new length.abs, VersionTask::Version::Component.new('0')
-      value  = VersionTask::Version::Component.new(value.to_s)
+      zeroes = Array.new length.abs, RakeVersioning::Version::Component.new('0')
+      value  = RakeVersioning::Version::Component.new(value.to_s)
 
       if length >= 0
         self.components[index, length] = zeroes

@@ -1,6 +1,6 @@
 $: << 'lib'
 
-require 'rake/version_task'
+require 'rake/rake_versioning'
 
 require 'rubygems'
 require 'rubygems/package_task'
@@ -8,8 +8,8 @@ require 'rdoc/task'
 require 'spec/rake/spectask'
 
 spec = Gem::Specification.new do |s|
-  s.name    = 'version'
-  s.version = VersionTask::Version.current or '0.0.0'
+  s.name    = 'rake-versioning'
+  s.version = RakeVersioning::Version.current or '0.0.0'
   s.summary = 'simple version-number encapsulation'
 
   s.author  = 'Stephen Touset'
@@ -29,7 +29,7 @@ Gem::PackageTask.new(spec) do |gem|
 end
 
 Rake::RDocTask.new do |doc|
-  doc.title    = "version #{VersionTask::Version.current}"
+  doc.title    = "version #{RakeVersioning::Version.current}"
   doc.rdoc_dir = 'doc'
   doc.main     = 'README.rdoc'
   doc.rdoc_files.include('*.rdoc')
@@ -40,7 +40,7 @@ Spec::Rake::SpecTask.new(:spec) do |task|
   task.spec_files = FileList['spec/**/*_spec.rb']
 end
 
-Rake::VersionTask.new do |v|
+Rake::RakeVersioning.new do |v|
   v.with_git_tag = true
   v.with_gemspec = spec
 end

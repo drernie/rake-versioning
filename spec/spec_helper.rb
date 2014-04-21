@@ -1,7 +1,7 @@
 $:.unshift File.dirname(__FILE__)
 $:.unshift File.join(File.dirname(__FILE__), '..', 'lib')
 
-require 'version_task'
+require 'rake_versioning'
 require 'spec'
 require 'spec/autorun'
 

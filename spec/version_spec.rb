@@ -10,7 +10,7 @@ module ImplicitVersion
   end
 end
 
-describe VersionTask::Version do
+describe RakeVersioning::Version do
   include ImplicitVersion
 
   subject { v2_9 }
@@ -53,7 +53,7 @@ describe VersionTask::Version do
   end
 end
 
-describe VersionTask::Version do
+describe RakeVersioning::Version do
   include ImplicitVersion
 
   subject { v0_10_0 }
@@ -97,7 +97,7 @@ describe VersionTask::Version do
 end
 
 
-describe VersionTask::Version, 'with a prerelease revision' do
+describe RakeVersioning::Version, 'with a prerelease revision' do
   include ImplicitVersion
 
   subject { v1_6_3a }
@@ -140,7 +140,7 @@ describe VersionTask::Version, 'with a prerelease revision' do
   end
 end
 
-describe VersionTask::Version, 'with a prerelease minor version' do
+describe RakeVersioning::Version, 'with a prerelease minor version' do
   include ImplicitVersion
 
   subject { v1_6a }
@@ -183,7 +183,7 @@ describe VersionTask::Version, 'with a prerelease minor version' do
   end
 end
 
-describe VersionTask::Version do
+describe RakeVersioning::Version do
   include ImplicitVersion
 
   it 'should preserve equality' do

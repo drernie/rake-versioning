@@ -1,9 +1,9 @@
-require 'version_task'
+require 'rake_versioning'
 
 require 'rake/tasklib'
 require 'pathname'
 
-class Rake::VersionTask < Rake::TaskLib
+class Rake::RakeVersioning < Rake::TaskLib
   attr_accessor :filename
   attr_writer   :filetype
   
@@ -33,7 +33,7 @@ class Rake::VersionTask < Rake::TaskLib
   attr_accessor :with_gemspec
   
   #
-  # Creates a new VersionTask with the given +filename+. Attempts to
+  # Creates a new RakeVersioning with the given +filename+. Attempts to
   # autodetect the +filetype+ and whether or not git or hg is present.
   #
   def initialize(filename = 'VERSION')

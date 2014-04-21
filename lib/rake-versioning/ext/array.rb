@@ -1,10 +1,10 @@
-require 'version_task'
+require 'rake_versioning'
 
 class Array
   #
   # Converts the Array into a version number.
   #
   def to_version
-    VersionTask::Version.new *self
+    RakeVersioning::Version.new *self
   end
 end

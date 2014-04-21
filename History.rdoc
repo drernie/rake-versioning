@@ -20,8 +20,8 @@
   * Version#prerelease? to determine if it's a prerelease version
   * Version#bump! now accepts symbolic indexes
   * Version#inspect has slightly friendlier output
-  * VersionTask now correctly bumps prerelease versions
-  * VersionTask has new version:bump:pre task
+  * RakeVersioning now correctly bumps prerelease versions
+  * RakeVersioning has new version:bump:pre task
   * now properly MIT-licensed
   * somewhat spec'd
 
@@ -44,7 +44,7 @@
 
 * enhancements
   * support for committing and tagging through git
-    * see rdoc for Rake::VersionTask
+    * see rdoc for Rake::RakeVersioning
 
 === Version 0.6.2 / 2010-02-05
 
@@ -66,15 +66,15 @@
   * readme and history files
   * extended documentation
   * support for easy version-file management through rake
-    * see rdoc for Rake::VersionTask
+    * see rdoc for Rake::RakeVersioning
   * support auto-setting VERSION constant in classes
     * see rdoc for Class::Versioned()
-  * eating own dogfood with Rake::VersionTask
+  * eating own dogfood with Rake::RakeVersioning
   * make Version#to_hash exclude keys with nil values
 
 * todo for 1.0.0
   * full suite of specs
-  * remove duplication in Class::Version() and Rake::VersionTask
+  * remove duplication in Class::Version() and Rake::RakeVersioning
   * get rid of gem task warnings
 
 === Version 0.5.0 / 2010-02-04

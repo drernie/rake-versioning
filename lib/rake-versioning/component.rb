@@ -1,6 +1,6 @@
-require 'version_task'
+require 'rake_versioning'
 
-class VersionTask::Version::Component
+class RakeVersioning::Version::Component
   attr_accessor :digits
   attr_accessor :letter
 
